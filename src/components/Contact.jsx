@@ -1,10 +1,12 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import styled from "styled-components";
-import { Zoom } from "react-awesome-reveal";
+import { Slide, Zoom } from "react-awesome-reveal";
+import TaskAltIcon from "@mui/icons-material/TaskAlt";
 
 const Contact = () => {
   const form = useRef();
+  const [sent, setSent] = useState(false);
 
   const sendEmail = e => {
     e.preventDefault();
@@ -19,6 +21,10 @@ const Contact = () => {
       .then(
         result => {
           console.log(result.text);
+          setSent(true);
+          setTimeout(() => {
+            setSent(false);
+          }, 5000);
         },
         error => {
           console.log(error.text);
@@ -36,35 +42,41 @@ const Contact = () => {
       </Zoom>
 
       <div className="msgForm">
-        <Zoom triggerOnce>
-          <form ref={form} onSubmit={sendEmail}>
-            <div className="user">
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                className="inputForm"
-              />
+        <form ref={form} onSubmit={sendEmail}>
+          <div className="user">
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              className="inputForm"
+            />
 
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                className="inputForm"
-              />
-            </div>
-            <div className="msg">
-              <textarea
-                name="message"
-                placeholder="Message"
-                className="inputForm"
-              />
-            </div>
-            <div className="formBtn">
-              <input type="submit" value="Send" />
-            </div>
-          </form>
-        </Zoom>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              className="inputForm"
+            />
+          </div>
+          <div className="msg">
+            <textarea
+              name="message"
+              placeholder="Message"
+              className="inputForm"
+            />
+          </div>
+          <div className="formBtn">
+            <input type="submit" value="Send" />
+          </div>
+        </form>
+        {sent && (
+          <div className="notif">
+            <Slide>
+              <TaskAltIcon />
+              <span> Sent</span>
+            </Slide>
+          </div>
+        )}
       </div>
     </ContactContainer>
   );
@@ -103,10 +115,18 @@ const ContactContainer = styled.div`
     background-color: #fff;
     padding: 20px 25px;
     background-color: transparent;
-
+    position: relative;
     border-radius: 20px;
     box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.5),
       -4px -4px 16px rgba(255, 255, 255, 0.05);
+
+    .notif {
+      position: absolute;
+      bottom: 35px;
+      display: flex;
+      gap: 5px;
+      color: #04e904;
+    }
   }
   .user {
     display: flex;
