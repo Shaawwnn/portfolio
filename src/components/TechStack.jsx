@@ -17,7 +17,7 @@ const TechStack = () => {
       <TechStackContainer>
         <div className="techStackInner">
           {techStack.map((x, i) => (
-            <Fade delay={i * 70}>
+            <Fade delay={i * 70} triggerOnce>
               <Tech stack={x} key={i} />
             </Fade>
           ))}
