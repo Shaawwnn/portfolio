@@ -13,7 +13,7 @@ export const Navbar = () => {
         </a>
 
         <div className="cv">
-          <a href="/RESUME.pdf" download>
+          <a href="/Resume.pdf" download>
             <DownloadIcon />
             CV
           </a>
