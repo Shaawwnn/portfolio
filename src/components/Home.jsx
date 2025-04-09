@@ -34,8 +34,7 @@ const Home = () => {
             <span className="tag">
               &lt;<span className="tagName">p</span>&gt;
             </span>{" "}
-            I am a <span className="title">Computer Engineering</span> student
-            with a passion for developing things for the web
+           I'm a <span className="title">Software Engineer</span> with 2 years of experience, focused on creating clean, efficient web applications.
             <span className="tag">
               {" "}
               &lt;&#x2f;<span className="tagName">p</span>&gt;
