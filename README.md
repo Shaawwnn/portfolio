@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Shawn Alberto - Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What This Portfolio Is About
 
-## Available Scripts
+This is my personal portfolio website showcasing my work as a **Software Engineer** with 2 years of experience. It's designed to demonstrate my technical skills and project capabilities to potential employers and clients.
 
-In the project directory, you can run:
+## Portfolio Overview
 
-### `npm start`
+**Who I Am**: Shawn Alberto - Software Engineer specializing in web development and IoT solutions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**What I Do**: 
+- Build full-stack web applications using modern technologies
+- Develop IoT solutions with Arduino and embedded systems
+- Create responsive, user-friendly interfaces
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## What's Included
 
-### `npm test`
+### 🏠 **Home Section**
+- Professional introduction with animated HTML-styled presentation
+- Clear statement of my role as a Software Engineer
+- Call-to-action for contact
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 💼 **My Projects** (5 Total)
+**Web Applications:**
+- **Bubble** - Facebook UI clone with real-time chat (MERN stack)
+- **Cozy** - E-commerce shopping cart website
+- **Aibatt** - Real-time chat application with Firebase
 
-### `npm run build`
+**IoT Projects:**
+- **Vendo Machine** - Arduino-based vending machine
+- **Appliances Controller** - IoT home automation system
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🛠️ **Technical Skills**
+- Frontend: React, HTML, CSS, JavaScript
+- Backend: Node.js, Express
+- Databases: MongoDB, SQL
+- IoT: Arduino, C++
+- Cloud: Firebase
+- Tools: Git, GitHub, Postman
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 📞 **Contact**
+- Professional contact form
+- Easy way for employers/clients to reach me
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Key Features
+- **Modern Design**: Clean, professional appearance with smooth animations
+- **Responsive**: Works perfectly on all devices
+- **Interactive**: Engaging user experience with hover effects and transitions
+- **Professional**: Showcases technical competency and project diversity
 
-### `npm run eject`
+## Purpose
+This portfolio serves as my digital resume and project showcase, demonstrating my ability to:
+- Build complete web applications
+- Work with both frontend and backend technologies
+- Create IoT solutions and embedded systems
+- Design user-friendly interfaces
+- Manage projects from concept to deployment
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*Built with React and styled-components to showcase modern web development skills*
