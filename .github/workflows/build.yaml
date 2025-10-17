@@ -19,6 +19,9 @@ jobs:
       statuses: write
 
     steps:
+      - name: Job starting
+        run: echo "🚀 Starting Lint Job"
+
       - name: Checkout code
         uses: actions/checkout@v5
 
@@ -30,6 +33,14 @@ jobs:
           VALIDATE_MARKDOWN: true
           VALIDATE_YAML: true
 
+      - name: Job done
+        if: success()
+        run: echo "✅ Lint Job Complete"
+
+      - name: Job failed
+        if: failure()
+        run: echo "❌ Lint Job Failed"
+
   build-and-test:
     name: Build and Test
     runs-on: ubuntu-latest
@@ -38,6 +49,9 @@ jobs:
       contents: read
 
     steps:
+      - name: Job starting
+        run: echo "🚀 Starting Build and Test Job"
+
       - name: Checkout code
         uses: actions/checkout@v5
 
@@ -56,6 +70,14 @@ jobs:
       - name: Build application
         run: npm run build
 
+      - name: Job done
+        if: success()
+        run: echo "✅ Build and Test Job Complete"
+
+      - name: Job failed
+        if: failure()
+        run: echo "❌ Build and Test Job Failed"
+
   deploy:
     name: Deploy to Vercel
     runs-on: ubuntu-latest
@@ -66,6 +88,9 @@ jobs:
       deployments: write
 
     steps:
+      - name: Job starting
+        run: echo "🚀 Starting Deploy Job"
+
       - name: Checkout code
         uses: actions/checkout@v5
 
@@ -77,3 +102,11 @@ jobs:
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prod'
           working-directory: ./
+
+      - name: Job done
+        if: success()
+        run: echo "✅ Deploy Job Complete"
+
+      - name: Job failed
+        if: failure()
+        run: echo "❌ Deploy Job Failed"
