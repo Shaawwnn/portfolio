@@ -33,13 +33,14 @@ jobs:
           VALIDATE_MARKDOWN: true
           VALIDATE_YAML: true
 
-      - name: Job done
-        if: success()
-        run: echo "✅ Lint Job Complete"
-
-      - name: Job failed
-        if: failure()
-        run: echo "❌ Lint Job Failed"
+      - name: Job status
+        if: always()
+        run: |
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "✅ Lint Job Complete"
+          else
+            echo "❌ Lint Job Failed"
+          fi
 
   build-and-test:
     name: Build and Test
@@ -70,13 +71,14 @@ jobs:
       - name: Build application
         run: npm run build
 
-      - name: Job done
-        if: success()
-        run: echo "✅ Build and Test Job Complete"
-
-      - name: Job failed
-        if: failure()
-        run: echo "❌ Build and Test Job Failed"
+      - name: Job status
+        if: always()
+        run: |
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "✅ Build and Test Job Complete"
+          else
+            echo "❌ Build and Test Job Failed"
+          fi
 
   deploy:
     name: Deploy to Vercel
@@ -103,10 +105,11 @@ jobs:
           vercel-args: '--prod'
           working-directory: ./
 
-      - name: Job done
-        if: success()
-        run: echo "✅ Deploy Job Complete"
-
-      - name: Job failed
-        if: failure()
-        run: echo "❌ Deploy Job Failed"
+      - name: Job status
+        if: always()
+        run: |
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "✅ Deploy Job Complete"
+          else
+            echo "❌ Deploy Job Failed"
+          fi
