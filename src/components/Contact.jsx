@@ -98,10 +98,11 @@ const ContactContainer = styled.div`
     text-align: center;
 
     font-size: 50px;
-    color: white;
+    color: #FFFFFF;
     margin-bottom: 30px;
     span {
-      color: #c6de41;
+      color: #00D9FF;
+      text-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
     }
 
     @media screen and (max-width: 800px) {
@@ -114,18 +115,19 @@ const ContactContainer = styled.div`
     max-width: 700px;
     background-color: #fff;
     padding: 20px 25px;
-    background-color: transparent;
+    background: rgba(30, 39, 73, 0.5);
+    backdrop-filter: blur(10px);
     position: relative;
     border-radius: 20px;
-    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.5),
-      -4px -4px 16px rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 217, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 
     .notif {
       position: absolute;
       bottom: 35px;
       display: flex;
       gap: 5px;
-      color: #04e904;
+      color: #10B981;
     }
   }
   .user {
@@ -154,14 +156,19 @@ const ContactContainer = styled.div`
   .inputForm {
     outline: none;
     line-height: 25px;
-    background-color: #0a1a1f;
-    color: white;
+    background-color: rgba(10, 14, 39, 0.6);
+    color: #E4E9F2;
     font-size: 16px;
     font-family: "Courier Prime", "monospace";
     border-radius: 10px;
-    border: none;
+    border: 1px solid rgba(0, 217, 255, 0.2);
     padding: 20px;
-    box-shadow: inset 6px 6px 6px #08181d, inset -6px -6px 6px #0a242b;
+    transition: all 300ms ease;
+
+    &:focus {
+      border-color: #00D9FF;
+      box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+    }
   }
 
   .formBtn {
@@ -171,20 +178,22 @@ const ContactContainer = styled.div`
 
     input {
       font-family: "Courier Prime", monospace;
-      border: 1px solid #153b44;
-      border-radius: 2px;
+      border: 2px solid #00D9FF;
+      border-radius: 10px;
       padding: 15px 40px;
       cursor: pointer;
-      background-color: #c6de41;
-      color: #153b44;
+      background: linear-gradient(135deg, #00D9FF 0%, #00A8CC 100%);
+      color: #0A0E27;
       text-decoration: none;
-      transition: all 500ms ease;
+      transition: all 300ms ease;
       font-weight: 700;
-      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
 
       &:hover {
-        background-color: transparent;
-        color: #c6de41;
+        background: transparent;
+        color: #00D9FF;
+        box-shadow: 0 0 30px rgba(0, 217, 255, 0.5);
+        transform: translateY(-2px);
       }
     }
   }

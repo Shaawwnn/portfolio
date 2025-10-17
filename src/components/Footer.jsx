@@ -48,8 +48,15 @@ export default Footer;
 
 const FooterContainer = styled.div`
   .MuiSvgIcon-root {
-    color: #c6de41;
+    color: #00D9FF;
     font-size: 40px;
+    transition: all 300ms ease;
+
+    &:hover {
+      color: #FF6B9D;
+      transform: translateY(-3px);
+      filter: drop-shadow(0 0 10px rgba(255, 107, 157, 0.5));
+    }
   }
 
   display: flex;
@@ -74,11 +81,12 @@ const FooterContainer = styled.div`
   }
 
   .footerTxt {
-    color: white;
+    color: #E4E9F2;
 
     span {
-      color: #c6de41;
+      color: #00D9FF;
       font-weight: 800;
+      text-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
     }
   }
 `;

@@ -73,12 +73,12 @@ const HomeContainer = styled.div`
   padding-bottom: 4rem;
   overflow: hidden;
   .tag {
-    color: gray;
+    color: #9BA4B5;
     font-family: "Courier Prime", monospace;
     font-size: 1.3rem;
 
     .tagName {
-      color: #2d6e7e;
+      color: #00D9FF;
     }
   }
   .homeTitle {
@@ -88,18 +88,20 @@ const HomeContainer = styled.div`
       font-family: "IBM Plex Sans";
       font-weight: 700;
       font-size: clamp(3rem, 12vw, 4.5rem);
-      color: whitesmoke;
+      color: #FFFFFF;
+      text-shadow: 0 0 30px rgba(0, 217, 255, 0.3);
     }
 
     p {
       font-family: "Courier Prime", monospace;
-      color: white;
+      color: #E4E9F2;
       font-size: 1.3rem;
       margin: 10px 0;
       line-height: 1.5rem;
       .title {
         font-weight: bold;
-        color: #c6de41;
+        color: #FF6B9D;
+        text-shadow: 0 0 20px rgba(255, 107, 157, 0.4);
       }
     }
   }
@@ -113,19 +115,24 @@ const HomeContainer = styled.div`
 
     a {
       font-family: "Courier Prime", monospace;
-      border: 1px solid #153b44;
-      border-radius: 2px;
+      border: 2px solid #00D9FF;
+      border-radius: 8px;
       padding: 15px 40px;
       cursor: pointer;
-      background-color: #c6de41;
-      color: #153b44;
+      background: linear-gradient(135deg, #00D9FF 0%, #00A8CC 100%);
+      color: #0A0E27;
       text-decoration: none;
-      transition: all 500ms ease;
+      transition: all 300ms ease;
       font-weight: 700;
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+      position: relative;
+      overflow: hidden;
 
       &:hover {
-        background-color: transparent;
-        color: #c6de41;
+        background: transparent;
+        color: #00D9FF;
+        box-shadow: 0 0 30px rgba(0, 217, 255, 0.5);
+        transform: translateY(-2px);
       }
     }
   }

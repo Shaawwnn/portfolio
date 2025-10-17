@@ -68,10 +68,11 @@ const TechStackHeader = styled.div`
     text-align: center;
 
     font-size: 50px;
-    color: white;
+    color: #FFFFFF;
     margin-bottom: 30px;
     span {
-      color: #c6de41;
+      color: #00D9FF;
+      text-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
     }
 
     @media screen and (max-width: 800px) {

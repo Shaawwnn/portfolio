@@ -63,22 +63,25 @@ const NavBarInner = styled.div`
 
   .cv a {
     font-family: "Courier Prime", monospace;
-    border: 1px solid #153b44;
-    border-radius: 2px;
-    padding: 10px 40px;
+    border: 2px solid #00D9FF;
+    border-radius: 8px;
+    padding: 10px 30px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    color: #c6de41;
+    color: #00D9FF;
     text-decoration: none;
-    transition: all 500ms ease;
+    transition: all 300ms ease;
     font-weight: 700;
+    background: transparent;
 
     &:hover {
-      background-color: #c6de41;
-      color: #153b44;
+      background-color: #00D9FF;
+      color: #0A0E27;
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+      transform: translateY(-2px);
     }
   }
 

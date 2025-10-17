@@ -17,10 +17,12 @@ const TechContainer = styled.div`
   .imgContainer {
     img {
       width: 100%;
-      transition: all 250ms ease-out;
+      transition: all 300ms ease-out;
+      filter: grayscale(30%);
 
       &:hover {
-        transform: translateY(-10px);
+        transform: translateY(-10px) scale(1.05);
+        filter: grayscale(0%) drop-shadow(0 0 15px rgba(0, 217, 255, 0.4));
       }
     }
   }

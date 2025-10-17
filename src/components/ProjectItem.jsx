@@ -76,13 +76,14 @@ const ProjectItemContainer = styled.div`
       }
       .projLink {
         transition: all 250ms ease;
-        color: #c6de41;
+        color: #00D9FF;
         display: flex;
         align-items: center;
         gap: 5px;
         &:hover {
-          color: #ffffff;
+          color: #FF6B9D;
           transform: scale(1.04);
+          text-shadow: 0 0 15px rgba(255, 107, 157, 0.5);
         }
       }
     }
