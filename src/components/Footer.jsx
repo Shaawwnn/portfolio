@@ -36,7 +36,7 @@ const Footer = () => {
 
         <div>
           <p className="footerTxt">
-            <span>&#169;</span> Created by <span>Shawn Alberto</span>
+            <span>&#169;</span> 2025 Created by <span>Shawn Alberto</span>. All rights reserved.
           </p>
         </div>
       </div>
