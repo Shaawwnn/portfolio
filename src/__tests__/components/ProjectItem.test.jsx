@@ -23,62 +23,89 @@ const mockProjectDataWithoutSite = {
 
 describe('ProjectItem Component', () => {
   test('renders ProjectItem with project data', () => {
-    render(<ProjectItem data={mockProjectData} />);
-    expect(screen.getByText("Test Project")).toBeInTheDocument();
+    render(<ProjectItem data={mockProjectData} index={0} />);
+    expect(screen.getAllByText("Test Project")).toHaveLength(2); // One in overlay, one in main content
   });
 
   test('renders project title', () => {
-    render(<ProjectItem data={mockProjectData} />);
-    const title = screen.getByRole('heading', { name: /Test Project/i });
-    expect(title).toBeInTheDocument();
+    render(<ProjectItem data={mockProjectData} index={0} />);
+    const titles = screen.getAllByRole('heading', { name: /Test Project/i });
+    expect(titles).toHaveLength(2); // One h3 in overlay, one h2 in main content
   });
 
   test('renders project description', () => {
-    render(<ProjectItem data={mockProjectData} />);
-    expect(screen.getByText(/This is a test project description/i)).toBeInTheDocument();
+    render(<ProjectItem data={mockProjectData} index={0} />);
+    expect(screen.getAllByText(/This is a test project description/i)).toHaveLength(2); // One in overlay, one in main content
   });
 
   test('renders project image with correct src', () => {
-    render(<ProjectItem data={mockProjectData} />);
+    render(<ProjectItem data={mockProjectData} index={0} />);
     const images = screen.getAllByRole('img');
     const projectImage = images.find(img => img.src.includes('/test.png'));
     expect(projectImage).toBeInTheDocument();
   });
 
   test('renders Live Demo link when siteURL is provided', () => {
-    render(<ProjectItem data={mockProjectData} />);
+    render(<ProjectItem data={mockProjectData} index={0} />);
     const liveLink = screen.getByText(/Live Demo/i).closest('a');
     expect(liveLink).toHaveAttribute('href', 'https://test.com');
-    expect(liveLink).toHaveAttribute('target', 'blank');
+    expect(liveLink).toHaveAttribute('target', '_blank');
   });
 
   test('does not render Live Demo link when siteURL is null', () => {
-    render(<ProjectItem data={mockProjectDataWithoutSite} />);
+    render(<ProjectItem data={mockProjectDataWithoutSite} index={0} />);
     expect(screen.queryByText(/Live Demo/i)).not.toBeInTheDocument();
   });
 
-  test('always renders Repo link', () => {
-    render(<ProjectItem data={mockProjectData} />);
-    const repoLink = screen.getByText(/Repo/i).closest('a');
+  test('always renders View Code link', () => {
+    render(<ProjectItem data={mockProjectData} index={0} />);
+    const repoLink = screen.getByText(/View Code/i).closest('a');
     expect(repoLink).toHaveAttribute('href', 'https://github.com/test/repo');
+    expect(repoLink).toHaveAttribute('target', '_blank');
   });
 
   test('renders tech stack images', () => {
-    const { container } = render(<ProjectItem data={mockProjectData} />);
-    const stackImages = container.querySelectorAll('.projStack');
+    const { container } = render(<ProjectItem data={mockProjectData} index={0} />);
+    const stackImages = container.querySelectorAll('img[alt*="react"], img[alt*="nodejs"]');
     expect(stackImages.length).toBe(mockProjectData.stack.length);
   });
 
-  test('applies reverse layout for IoT category', () => {
-    const { container } = render(<ProjectItem data={mockProjectDataWithoutSite} />);
-    const projectContainer = container.querySelector('.vendoReverse');
-    expect(projectContainer).toBeInTheDocument();
+  test('renders Web App category badge for web projects', () => {
+    render(<ProjectItem data={mockProjectData} index={0} />);
+    expect(screen.getByText(/Web App/i)).toBeInTheDocument();
   });
 
-  test('does not apply reverse layout for web category', () => {
-    const { container } = render(<ProjectItem data={mockProjectData} />);
-    const projectContainer = container.querySelector('.vendoReverse');
-    expect(projectContainer).not.toBeInTheDocument();
+  test('renders IoT Project category badge for iot projects', () => {
+    render(<ProjectItem data={mockProjectDataWithoutSite} index={0} />);
+    expect(screen.getByText(/IoT Project/i)).toBeInTheDocument();
+  });
+
+  test('applies web class for web category', () => {
+    const { container } = render(<ProjectItem data={mockProjectData} index={0} />);
+    const projectCard = container.querySelector('.web');
+    expect(projectCard).toBeInTheDocument();
+  });
+
+  test('applies iot class for iot category', () => {
+    const { container } = render(<ProjectItem data={mockProjectDataWithoutSite} index={0} />);
+    const projectCard = container.querySelector('.iot');
+    expect(projectCard).toBeInTheDocument();
+  });
+
+  test('renders project card with proper structure', () => {
+    const { container } = render(<ProjectItem data={mockProjectData} index={0} />);
+    const projectCard = container.querySelector('.project-card');
+    const projectImage = container.querySelector('.project-image');
+    // Note: projectContent doesn't have a specific class name in the new structure
+    
+    expect(projectCard).toBeInTheDocument();
+    expect(projectImage).toBeInTheDocument();
+  });
+
+  test('renders overlay content on hover', () => {
+    const { container } = render(<ProjectItem data={mockProjectData} index={0} />);
+    const overlay = container.querySelector('.overlay-content');
+    expect(overlay).toBeInTheDocument();
   });
 });
 
