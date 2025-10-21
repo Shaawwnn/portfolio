@@ -43,7 +43,7 @@ const Home = () => {
         </Fade>
         <Slide triggerOnce delay={1000} duration={750}>
           <div className="contactBtn">
-            <a href="#contact">Contact Me</a>
+            <a href="#connect">Let's Connect</a>
           </div>
         </Slide>
       </div>

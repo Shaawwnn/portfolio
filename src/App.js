@@ -1,5 +1,5 @@
 import "./App.css";
-import Contact from "./components/Contact";
+import LetsConnect from "./components/LetsConnect";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 
@@ -14,7 +14,7 @@ function App() {
       <Home />
       <Projects />
       <TechStack />
-      <Contact />
+      <LetsConnect />
       <Footer />
     </div>
   );

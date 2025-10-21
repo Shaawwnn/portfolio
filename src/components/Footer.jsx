@@ -1,39 +1,10 @@
 import React from "react";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import styled from "styled-components";
 
 const Footer = () => {
   return (
     <FooterContainer>
       <div className="footerOuter">
-        <ul className="links">
-          <li>
-            <a
-              href="https://www.linkedin.com/in/shawn-michael-alberto-041937227/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <LinkedInIcon />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/Shaawwnn"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <GitHubIcon />
-            </a>
-          </li>
-          <li>
-            <a href="mailto:shawnalberto10@gmail.com">
-              <AlternateEmailIcon />
-            </a>
-          </li>
-        </ul>
-
         <div>
           <p className="footerTxt">
             <span>&#169;</span> 2025 Created by <span>Shawn Alberto</span>. All rights reserved.
