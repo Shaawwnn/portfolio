@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-import LaunchIcon from "@mui/icons-material/Launch";
 
 const ProjectItem = ({ data, index }) => {
   const [isHovered, setIsHovered] = useState(false);
