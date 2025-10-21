@@ -154,8 +154,8 @@ const TechStackHeader = styled.div`
   .subtitle {
     font-family: "Courier Prime", monospace;
     color: #E4E9F2;
-    font-size: 1.2rem;
-    max-width: 600px;
+    font-size: 1rem;
+    max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
   }
