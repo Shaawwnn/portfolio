@@ -8,8 +8,13 @@ RUN npm ci --legacy-peer-deps
 
 COPY . .
 
-RUN echo "Hello, World!"
+# Build the production bundle
+RUN npm run build
+
+# Install a production server
+RUN npm install -g serve
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+# Serve the production build
+CMD ["serve", "-s", "build", "-l", "3000"]
