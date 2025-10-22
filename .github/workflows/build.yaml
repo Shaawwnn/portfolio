@@ -123,8 +123,8 @@ jobs:
       - name: Job starting
         run: echo "🚀 Starting Cloud Run Deploy Job"
 
-      - name: Setup Docker Buildx
-        uses: docker/setup-buildx-action@v3
+      - name: Checkout code
+        uses: actions/checkout@v5
 
       - name: Build image
         run: docker build -t shawnalberto/portfolio-app .
