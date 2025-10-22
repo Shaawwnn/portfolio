@@ -34,7 +34,6 @@ const TechStack = () => {
         { name: "Docker", icon: "docker.png" },
         { name: "Arduino", icon: "arduino1.png" },
         { name: "C++", icon: "c++.png" },
-        { name: "Adobe Creative", icon: "adobe.png" },
         { name: "B4A", icon: "b4a.png" },
       ]
     },
@@ -75,7 +74,6 @@ const TechStack = () => {
         { name: "Docker", icon: "docker.png" },
         { name: "Arduino", icon: "arduino1.png" },
         { name: "C++", icon: "c++.png" },
-        { name: "Adobe Creative", icon: "adobe.png" },
         { name: "B4A", icon: "b4a.png" },
       ]
     }
