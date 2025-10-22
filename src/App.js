@@ -8,6 +8,7 @@ import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
 
 function App() {
+  console.log("Someone is viewing my portfolio");
   return (
     <div className="App">
       <Navbar />
