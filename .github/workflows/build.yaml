@@ -143,7 +143,7 @@ jobs:
           tags: ${{ env.DOCKERHUB_USERNAME }}/portfolio-app
 
       - name: Authenticate to Google Cloud
-      - uses: 'google-github-actions/auth@v3'
+        uses: 'google-github-actions/auth@v3'
         with:
           credentials_json: '${{ secrets.PORTFOLIO_SA_KEY }}'
       # Step 4: Deploy to Cloud Run
