@@ -51,7 +51,7 @@ const LetsConnect = () => {
 
         <Fade triggerOnce delay={700}>
           <div className="resumeSection">
-            <a href="/Shawn_Michael_Alberto_CV.pdf" download className="resumeBtn">
+            <a href="/ShawnAlberto_CV.pdf" download className="resumeBtn">
               <DownloadIcon />
               <span>Download Resume</span>
             </a>
