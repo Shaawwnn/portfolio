@@ -16,7 +16,7 @@ describe('Navbar Component', () => {
   test('renders CV download link with correct attributes', () => {
     render(<Navbar />);
     const cvLink = screen.getByText(/CV/i).closest('a');
-    expect(cvLink).toHaveAttribute('href', '/Shawn_Michael_Alberto_CV.pdf');
+    expect(cvLink).toHaveAttribute('href', '/ShawnAlberto_CV.pdf');
     expect(cvLink).toHaveAttribute('download');
   });
 
